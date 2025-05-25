@@ -70,3 +70,38 @@ else{
 					<div class="col-md-12">
 
 						<h2 class="page-title">Confirmed Bookings</h2>
+<!-- Zero Configuration Table -->
+						<div class="panel panel-default">
+							<div class="panel-heading">Bookings Info</div>
+							<div class="panel-body">
+
+								<table id="zctb" class="display table table-striped table-bordered table-hover" cellspacing="0" width="100%">
+									<thead>
+										<tr>
+										<th>#</th>
+											<th>Name</th>
+											<th>Booking No.</th>
+											<th>Vehicle</th>
+											<th>From Date</th>
+											<th>To Date</th>
+											<th>Status</th>
+											<th>Posting date</th>
+											<th>Action</th>
+										</tr>
+									</thead>
+									<tfoot>
+										<tr>
+										<th>#</th>
+										<th>Name</th>
+											<th>Booking No.</th>
+											<th>Vehicle</th>
+											<th>From Date</th>
+											<th>To Date</th>
+											<th>Status</th>
+											<th>Posting date</th>
+											<th>Action</th>
+										</tr>
+									</tfoot>
+									<tbody>
+
+									<?php 
