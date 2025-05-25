@@ -25,4 +25,10 @@ if(isset($_POST['send']))
     $error = "Something went wrong. Please try again";
   }
 }
+?>
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<title>Car Rental|| Contact Us Page</title>
+
 
