@@ -74,3 +74,24 @@ $error="Something went wrong. Please try again";
     box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
 }
 		</style>
+	</head>
+
+<body>
+	<?php include('includes/header.php');?>
+	<div class="ts-main-content">
+	<?php include('includes/leftbar.php');?>
+		<div class="content-wrapper">
+			<div class="container-fluid">
+
+				<div class="row">
+					<div class="col-md-12">
+					
+						<h2 class="page-title">Create Brand</h2>
+
+						<div class="row">
+							<div class="col-md-10">
+								<div class="panel panel-default">
+									<div class="panel-heading">Create Brand</div>
+									<div class="panel-body">
+										<form method="post" name="chngpwd" class="form-horizontal" onSubmit="return valid();">
+										
