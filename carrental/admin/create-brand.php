@@ -94,4 +94,41 @@ $error="Something went wrong. Please try again";
 									<div class="panel-heading">Create Brand</div>
 									<div class="panel-body">
 										<form method="post" name="chngpwd" class="form-horizontal" onSubmit="return valid();">
+<?php if($error){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } 
+				else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
+											<div class="form-group">
+												<label class="col-sm-4 control-label">Brand Name</label>
+												<div class="col-sm-8">
+													<input type="text" class="form-control" name="brand" id="brand" required>
+												</div>
+											</div>
+											<div class="hr-dashed"></div>
+											
+										
+								
+											
+											<div class="form-group">
+												<div class="col-sm-8 col-sm-offset-4">
+								
+													<button class="btn btn-primary" name="submit" type="submit">Submit</button>
+												</div>
+											</div>
+
+										</form>
+
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						
+					
+
+					</div>
+				</div>
+				
+			
+			</div>
+		</div>
+	</div>
 										
