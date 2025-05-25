@@ -129,3 +129,47 @@ if($query->rowCount() > 0)
 {
 foreach($results as $result)
 {				?>	
+<tr>
+											<td><?php echo htmlentities($cnt);?></td>
+											<td><?php echo htmlentities($result->FullName);?></td>
+											<td><?php echo htmlentities($result->EmailId);?></td>
+											<td><?php echo htmlentities($result->ContactNo);?></td>
+	<td><?php echo htmlentities($result->dob);?></td>
+											<td><?php echo htmlentities($result->Address);?></td>
+											<td><?php echo htmlentities($result->City);?></td>
+											<td><?php echo htmlentities($result->Country);?></td>
+											<td><?php echo htmlentities($result->RegDate);?></td>
+										</tr>
+										<?php $cnt=$cnt+1; }} ?>
+										
+									</tbody>
+								</table>
+
+						
+
+							</div>
+						</div>
+
+					
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Loading Scripts -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap-select.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.dataTables.min.js"></script>
+	<script src="js/dataTables.bootstrap.min.js"></script>
+	<script src="js/Chart.min.js"></script>
+	<script src="js/fileinput.js"></script>
+	<script src="js/chartData.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
+<?php } ?>
+
