@@ -106,4 +106,16 @@ $error="Something went wrong. Please try again";
   <div class="dark-overlay"></div>
 </section>
 <!-- /Page Header--> 
+<?php 
+$useremail=$_SESSION['login'];
+$sql = "SELECT * from tblusers where EmailId=:useremail";
+$query = $dbh -> prepare($sql);
+$query -> bindParam(':useremail',$useremail, PDO::PARAM_STR);
+$query->execute();
+$results=$query->fetchAll(PDO::FETCH_OBJ);
+$cnt=1;
+if($query->rowCount() > 0)
+{
+foreach($results as $result)
+{ ?>
 
