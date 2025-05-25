@@ -120,4 +120,46 @@ foreach($results as $result)
         </div>
       <?php }} ?>
          </div>
-       
+
+         <!--Side-Bar-->
+      <aside class="col-md-3 col-md-pull-9">
+        <div class="sidebar_widget">
+          <div class="widget_heading">
+            <h5><i class="fa fa-filter" aria-hidden="true"></i> Find Your  Car </h5>
+          </div>
+          <div class="sidebar_filter">
+            <form action="#" method="get">
+              <div class="form-group select">
+                <select class="form-control">
+                  <option>Select Brand</option>
+
+                  <?php $sql = "SELECT * from  tblbrands ";
+$query = $dbh -> prepare($sql);
+$query->execute();
+$results=$query->fetchAll(PDO::FETCH_OBJ);
+$cnt=1;
+if($query->rowCount() > 0)
+{
+foreach($results as $result)
+{       ?>  
+<option value="<?php echo htmlentities($result->id);?>"><?php echo htmlentities($result->BrandName);?></option>
+<?php }} ?>
+                 
+                </select>
+              </div>
+              <div class="form-group select">
+                <select class="form-control">
+                  <option>Select Fuel Type</option>
+<option value="Petrol">Petrol</option>
+<option value="Diesel">Diesel</option>
+<option value="CNG">CNG</option>
+                </select>
+              </div>
+             
+              <div class="form-group">
+                <button type="submit" class="btn btn-block"><i class="fa fa-search" aria-hidden="true"></i> Search Car</button>
+              </div>
+            </form>
+          </div>
+        </div>
+    
