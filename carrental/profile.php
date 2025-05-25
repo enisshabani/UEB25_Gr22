@@ -90,3 +90,27 @@ $msg="Profile Updated Successfully";
   <div class="dark-overlay"></div>
 </section>
 <!-- /Page Header-->
+<?php 
+$useremail=$_SESSION['login'];
+$sql = "SELECT * from tblusers where EmailId=:useremail";
+$query = $dbh -> prepare($sql);
+$query -> bindParam(':useremail',$useremail, PDO::PARAM_STR);
+$query->execute();
+$results=$query->fetchAll(PDO::FETCH_OBJ);
+$cnt=1;
+if($query->rowCount() > 0)
+{
+foreach($results as $result)
+{ ?>
+<section class="user_profile inner_pages">
+  <div class="container">
+    <div class="user_profile_info gray-bg padding_4x4_40">
+      <div class="upload_user_logo"> <img src="assets/images/dealer-logo.jpg" alt="image">
+      </div>
+
+      <div class="dealer_info">
+        <h5><?php echo htmlentities($result->FullName);?></h5>
+        <p><?php echo htmlentities($result->Address);?><br>
+          <?php echo htmlentities($result->City);?>&nbsp;<?php echo htmlentities($result->Country);?></p>
+      </div>
+    </div>
