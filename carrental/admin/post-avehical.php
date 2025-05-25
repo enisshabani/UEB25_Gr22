@@ -280,3 +280,53 @@ Image 5<input type="file" name="img5">
 <label for="brakeassist"> Brake Assist </label>
 </div>
 </div>
+div class="form-group">
+<div class="col-sm-3">
+<div class="checkbox checkbox-inline">
+<input type="checkbox" id="powersteering" name="powersteering" value="1">
+<input type="checkbox" id="powersteering" name="powersteering" value="1">
+<label for="inlineCheckbox5"> Power Steering </label>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="checkbox checkbox-inline">
+<input type="checkbox" id="driverairbag" name="driverairbag" value="1">
+<label for="driverairbag">Driver Airbag</label>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="checkbox checkbox-inline">
+<input type="checkbox" id="passengerairbag" name="passengerairbag" value="1">
+<label for="passengerairbag"> Passenger Airbag </label>
+</div></div>
+<div class="checkbox checkbox-inline">
+<input type="checkbox" id="powerwindow" name="powerwindow" value="1">
+<label for="powerwindow"> Power Windows </label>
+</div>
+</div>
+
+
+<div class="form-group">
+<div class="col-sm-3">
+<div class="checkbox checkbox-inline">
+<input type="checkbox" id="cdplayer" name="cdplayer" value="1">
+<label for="cdplayer"> CD Player </label>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="checkbox h checkbox-inline">
+<input type="checkbox" id="centrallocking" name="centrallocking" value="1">
+<label for="centrallocking">Central Locking</label>
+</div></div>
+<div class="col-sm-3">
+<div class="checkbox checkbox-inline">
+<input type="checkbox" id="crashcensor" name="crashcensor" value="1">
+<label for="crashcensor"> Crash Sensor </label>
+</div></div>
+<div class="col-sm-3">
+<div class="checkbox checkbox-inline">
+<input type="checkbox" id="leatherseats" name="leatherseats" value="1">
+<label for="leatherseats"> Leather Seats </label>
+</div>
+</div>
+</div>
