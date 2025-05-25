@@ -330,3 +330,40 @@ div class="form-group">
 </div>
 </div>
 </div>
+<div class="form-group">
+												<div class="col-sm-8 col-sm-offset-2">
+													<button class="btn btn-default" type="reset">Cancel</button>
+													<button class="btn btn-primary" name="submit" type="submit">Save changes</button>
+												</div>
+											</div>
+
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					
+
+					</div>
+				</div>
+				
+			
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Loading Scripts -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap-select.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.dataTables.min.js"></script>
+	<script src="js/dataTables.bootstrap.min.js"></script>
+	<script src="js/Chart.min.js"></script>
+	<script src="js/fileinput.js"></script>
+	<script src="js/chartData.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
+<?php } ?>
