@@ -82,4 +82,11 @@ if(isset($_POST['send']))
 </head>
 <body>
 
+<!-- Start Switcher -->
+<?php include('includes/colorswitcher.php');?>
+<!-- /Switcher -->  
+
+<!--Header-->
+<?php include('includes/header.php');?>
+<!-- /Header --> 
 
