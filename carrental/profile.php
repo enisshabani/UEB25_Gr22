@@ -64,3 +64,29 @@ $msg="Profile Updated Successfully";
 }
     </style>
 </head>
+<body>
+
+<!-- Start Switcher -->
+<?php include('includes/colorswitcher.php');?>
+<!-- /Switcher -->  
+        
+<!--Header-->
+<?php include('includes/header.php');?>
+<!-- /Header --> 
+<!--Page Header-->
+<section class="page-header profile_page">
+  <div class="container">
+    <div class="page-header_wrap">
+      <div class="page-heading">
+        <h1>Your Profile</h1>
+      </div>
+      <ul class="coustom-breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li>Profile</li>
+      </ul>
+    </div>
+  </div>
+  <!-- Dark Overlay-->
+  <div class="dark-overlay"></div>
+</section>
+<!-- /Page Header-->
