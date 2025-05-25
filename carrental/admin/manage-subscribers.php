@@ -7,8 +7,20 @@ if(strlen($_SESSION['alogin'])==0)
 header('location:index.php');
 }
 else{
+if(isset($_GET['del']))
+{
+$id=$_GET['del'];
+$sql = "delete from  tblsubscribers  WHERE id=:id";
+$query = $dbh->prepare($sql);
+$query -> bindParam(':id',$id, PDO::PARAM_STR);
+$query -> execute();
+$msg="Subscriber info deleted";
+
+}
+
 
  ?>
+
 <!doctype html>
 <html lang="en" class="no-js">
 
@@ -20,7 +32,7 @@ else{
 	<meta name="author" content="">
 	<meta name="theme-color" content="#3e454c">
 	
-	<title>Car Rental Portal | Confirmed Bookings   </title>
+	<title>Car Rental Portal |Admin Manage Subscribers   </title>
 
 	<!-- Font awesome -->
 	<link rel="stylesheet" href="css/font-awesome.min.css">
@@ -38,7 +50,7 @@ else{
 	<link rel="stylesheet" href="css/awesome-bootstrap-checkbox.css">
 	<!-- Admin Stye -->
 	<link rel="stylesheet" href="css/style.css">
-<style>
+  <style>
 		.errorWrap {
     padding: 10px;
     margin: 0 0 20px 0;
@@ -56,6 +68,7 @@ else{
     box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
 }
 		</style>
+
 </head>
 
 <body>
@@ -69,46 +82,35 @@ else{
 				<div class="row">
 					<div class="col-md-12">
 
-						<h2 class="page-title">Confirmed Bookings</h2>
-<!-- Zero Configuration Table -->
-						<div class="panel panel-default">
-							<div class="panel-heading">Bookings Info</div>
-							<div class="panel-body">
+						<h2 class="page-title">Manage Subscribers</h2>
 
+						<!-- Zero Configuration Table -->
+						<div class="panel panel-default">
+							<div class="panel-heading">Subscribers Details</div>
+							<div class="panel-body">
+							<?php if($error){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } 
+				else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
 								<table id="zctb" class="display table table-striped table-bordered table-hover" cellspacing="0" width="100%">
 									<thead>
 										<tr>
 										<th>#</th>
-											<th>Name</th>
-											<th>Booking No.</th>
-											<th>Vehicle</th>
-											<th>From Date</th>
-											<th>To Date</th>
-											<th>Status</th>
-											<th>Posting date</th>
+												<th>Email Id</th>
+											<th>Subscription Date</th>
 											<th>Action</th>
 										</tr>
 									</thead>
 									<tfoot>
 										<tr>
 										<th>#</th>
-										<th>Name</th>
-											<th>Booking No.</th>
-											<th>Vehicle</th>
-											<th>From Date</th>
-											<th>To Date</th>
-											<th>Status</th>
-											<th>Posting date</th>
+										<th>Email Id</th>
+										<th>Subscription Date</th>
 											<th>Action</th>
 										</tr>
 									</tfoot>
 									<tbody>
 
-									<?php 
-status=1;
-									$sql = "SELECT tblusers.FullName,tblbrands.BrandName,tblvehicles.VehiclesTitle,tblbooking.FromDate,tblbooking.ToDate,tblbooking.message,tblbooking.VehicleId as vid,tblbooking.Status,tblbooking.PostingDate,tblbooking.id,tblbooking.BookingNumber  from tblbooking join tblvehicles on tblvehicles.id=tblbooking.VehicleId join tblusers on tblusers.EmailId=tblbooking.userEmail join tblbrands on tblvehicles.VehiclesBrand=tblbrands.id   where tblbooking.Status=:status";
+									<?php $sql = "SELECT * from tblsubscribers";
 $query = $dbh -> prepare($sql);
-$query -> bindParam(':status',$status, PDO::PARAM_STR);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
 $cnt=1;
@@ -116,29 +118,16 @@ if($query->rowCount() > 0)
 {
 foreach($results as $result)
 {				?>	
-<tr>
+										<tr>
 											<td><?php echo htmlentities($cnt);?></td>
-											<td><?php echo htmlentities($result->FullName);?></td>
-											<td><?php echo htmlentities($result->BookingNumber);?></td>
-											<td><a href="edit-vehicle.php?id=<?php echo htmlentities($result->vid);?>"><?php echo htmlentities($result->BrandName);?> , <?php echo htmlentities($result->VehiclesTitle);?></td>
-											<td><?php echo htmlentities($result->FromDate);?></td>
-											<td><?php echo htmlentities($result->ToDate);?></td>
-											<td><?php 
-if($result->Status==0)
-{
-echo htmlentities('Not Confirmed yet');
-} else if ($result->Status==1) {
-echo htmlentities('Confirmed');
-}
- else{
- 	echo htmlentities('Cancelled');
- }
-										?></td>
+											<td><?php echo htmlentities($result->SubscriberEmail);?></td>
+									
 											<td><?php echo htmlentities($result->PostingDate);?></td>
+
 										<td>
 
 
-<a href="bookig-details.php?bid=<?php echo htmlentities($result->id);?>"> View</a>
+<a href="manage-subscribers.php?del=<?php echo $result->id;?>" onclick="return confirm('Do you want to delete');"><i class="fa fa-close"></i></a>
 </td>
 
 										</tr>
@@ -174,4 +163,3 @@ echo htmlentities('Confirmed');
 </body>
 </html>
 <?php } ?>
-
