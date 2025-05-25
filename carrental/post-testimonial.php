@@ -130,4 +130,19 @@ foreach($results as $result)
           <?php echo htmlentities($result->City);?>&nbsp;<?php echo htmlentities($result->Country); }}?></p>
       </div>
     </div>
+<div class="row">
+      <div class="col-md-3 col-sm-3">
+        <?php include('includes/sidebar.php');?>
+      <div class="col-md-6 col-sm-8">
+        <div class="profile_wrap">
+          <h5 class="uppercase underline">Post a Testimonial</h5>
+            <?php if($error){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } 
+        else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
+          <form  method="post">
+          
+          
+            <div class="form-group">
+              <label class="control-label">Testimonail</label>
+              <textarea class="form-control white_bg" name="testimonial" rows="4" required=""></textarea>
+            </div>
 
