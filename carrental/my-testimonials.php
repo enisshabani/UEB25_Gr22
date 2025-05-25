@@ -34,3 +34,36 @@ else{
 		<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/pink.css" title="pink" media="all" />
 		<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/green.css" title="green" media="all" />
 		<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/purple.css" title="purple" media="all" />
+
+        <!-- Fav and touch icons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/favicon-icon/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/favicon-icon/apple-touch-icon-114-precomposed.html">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/favicon-icon/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="assets/images/favicon-icon/apple-touch-icon-57-precomposed.png">
+<link rel="shortcut icon" href="assets/images/favicon-icon/favicon.png">
+<!-- Google-Font-->
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+</head>
+<body>
+<?php include('includes/colorswitcher.php');?>
+<!-- /Switcher -->  
+
+<!--Header-->
+<?php include('includes/header.php');?>
+<!--Page Header-->
+<section class="page-header profile_page">
+  <div class="container">
+    <div class="page-header_wrap">
+      <div class="page-heading">
+        <h1>My Testimonials</h1>
+      </div>
+      <ul class="coustom-breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li>My Testimonials</li>
+      </ul>
+    </div>
+  </div>
+  <!-- Dark Overlay-->
+  <div class="dark-overlay"></div>
+</section>
+<!-- /Page Header--> 
