@@ -66,3 +66,24 @@ error_reporting(0);
         <!-- Dark Overlay-->
         <div class="dark-overlay"></div>
     </section>
+    <section class="listing-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 col-md-push-3">
+                    <div class="result-sorting-wrapper">
+                        <div class="sorting-count">
+                            <?php
+                            //Query for Listing count
+                            $brand = $_POST['brand'];
+                            $fueltype = $_POST['fueltype'];
+                            $sql = "SELECT id from tblvehicles where tblvehicles.VehiclesBrand=:brand and tblvehicles.FuelType=:fueltype";
+                            $query = $dbh->prepare($sql);
+                            $query->bindParam(':brand', $brand, PDO::PARAM_STR);
+                            $query->bindParam(':fueltype', $fueltype, PDO::PARAM_STR);
+                            $query->execute();
+                            $results = $query->fetchAll(PDO::FETCH_OBJ);
+                            $cnt = $query->rowCount();
+                            ?>
+                            <p><span><?php echo htmlentities($cnt); ?> Listings</span></p>
+                        </div>
+                    </div>
