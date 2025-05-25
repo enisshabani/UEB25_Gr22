@@ -222,3 +222,61 @@ foreach($results as $result)
 <h4><b>Upload Images</b></h4>
 </div>
 </div>
+<div class="form-group">
+<div class="col-sm-4">
+Image 1 <span style="color:red">*</span><input type="file" name="img1" required>
+</div>
+<div class="col-sm-4">
+Image 2<span style="color:red">*</span><input type="file" name="img2" required>
+</div>
+<div class="col-sm-4">
+Image 3<span style="color:red">*</span><input type="file" name="img3" required>
+</div>
+</div>
+
+
+<div class="form-group">
+<div class="col-sm-4">
+Image 4<span style="color:red">*</span><input type="file" name="img4" required>
+</div>
+<div class="col-sm-4">
+Image 5<input type="file" name="img5">
+</div>
+
+</div>
+<div class="hr-dashed"></div>									
+</div>
+</div>
+</div>
+</div>
+							
+
+<div class="row">
+<div class="col-md-12">
+<div class="panel panel-default">
+<div class="panel-heading">Accessories</div>
+<div class="panel-body">
+
+
+<div class="form-group">
+<div class="col-sm-3">
+<div class="checkbox checkbox-inline">
+<input type="checkbox" id="airconditioner" name="airconditioner" value="1">
+<label for="airconditioner"> Air Conditioner </label>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="checkbox checkbox-inline">
+<input type="checkbox" id="powerdoorlocks" name="powerdoorlocks" value="1">
+<label for="powerdoorlocks"> Power Door Locks </label>
+</div></div>
+<div class="col-sm-3">
+<div class="checkbox checkbox-inline">
+<input type="checkbox" id="antilockbrakingsys" name="antilockbrakingsys" value="1">
+<label for="antilockbrakingsys"> AntiLock Braking System </label>
+</div></div>
+<div class="checkbox checkbox-inline">
+<input type="checkbox" id="brakeassist" name="brakeassist" value="1">
+<label for="brakeassist"> Brake Assist </label>
+</div>
+</div>
