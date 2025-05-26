@@ -119,6 +119,23 @@ INSERT INTO `tblbrands` (`id`, `BrandName`, `CreationDate`, `UpdationDate`) VALU
 (5, 'Toyota', '2024-05-01 16:24:34', '2024-06-05 05:26:34'),
 (7, 'Volkswagon', '2024-05-01 16:24:34', '2024-06-05 05:26:34');
 
+--
+-- Table structure for table `tblcontactusinfo`
+--
+
+CREATE TABLE `tblcontactusinfo` (
+  `id` int(11) NOT NULL,
+  `Address` tinytext DEFAULT NULL,
+  `EmailId` varchar(255) DEFAULT NULL,
+  `ContactNo` char(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `tblcontactusinfo`
+--
+
+INSERT INTO `tblcontactusinfo` (`id`, `Address`, `EmailId`, `ContactNo`) VALUES
+(1, 'J&K Block, Laxmi Nagar', 'info@gmail.com', '8974561236');
 
 --
 -- Table structure for table `tblvehicles`
