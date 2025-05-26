@@ -16,6 +16,31 @@ CREATE TABLE `admin` (
 INSERT INTO `admin` (`id`, `UserName`, `Password`, `updationDate`) VALUES
 (1, 'admin', '5c428d8875d2948607f3e3fe134d71b4', '2024-05-01 12:22:38');
 
+--
+-- Table structure for table `tblbooking`
+--
+
+CREATE TABLE `tblbooking` (
+  `id` int(11) NOT NULL,
+  `BookingNumber` bigint(12) DEFAULT NULL,
+  `userEmail` varchar(100) DEFAULT NULL,
+  `VehicleId` int(11) DEFAULT NULL,
+  `FromDate` varchar(20) DEFAULT NULL,
+  `ToDate` varchar(20) DEFAULT NULL,
+  `message` varchar(255) DEFAULT NULL,
+  `Status` int(11) DEFAULT NULL,
+  `PostingDate` timestamp NOT NULL DEFAULT current_timestamp(),
+  `LastUpdationDate` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `tblbooking`
+--
+
+INSERT INTO `tblbooking` (`id`, `BookingNumber`, `userEmail`, `VehicleId`, `FromDate`, `ToDate`, `message`, `Status`, `PostingDate`, `LastUpdationDate`) VALUES
+(1, 443108139, 'amikt12@gmail.com', 2, '2024-06-08', '2024-06-10', 'I want booking', 1, '2024-06-05 05:32:39', '2024-06-05 05:34:08');
+
+--
 -- Table structure for table `tblusers`
 --
 
